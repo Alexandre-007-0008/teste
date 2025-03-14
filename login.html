@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <style>
+            main {
+                background-color: white;
+                width: 1500px;
+                height: 1500px;
+            }
+
+            #container div {
+                background-color: #31B831;
+                display: grid;
+                height: 100px;
+                grid-template-columns: 500px 500px 500px;
+                /* grid-template-columns: minmax(100px, 100) 4fr;  fr=fração do tamanho em cada componente */
+                /* align-items: start; */
+                justify-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .container3-item {
+                display: inline-block; /* Adicionando essa linha, */
+                width: 100%; /* essa também */
+                height: 0; 
+               
+            }
+
+            .conteiner3-item_first {
+                background-color: blue;
+            }
+
+            .conteiner3-item_second {
+                background-color: blueviolet;
+            }
+            
+            .conteiner3-item_third {
+                background-color: chartreuse;
+            }
+
+            .container1 {
+                display: grid;
+                height: 100px;
+                /* grid-template-columns: 450px 400px 400px; */
+                justify-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .content {
+                /* background-color: blue; por que o background-color não funciona */
+                display: grid;
+                justify-items: center;
+                flex-wrap: nowrap;
+            }
+
+            #menu ul {
+                padding-top: 0px;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <div id="menu">
+                    <br>
+                    <h1>Eletronic's Place</h1>
+                    <ul>
+                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p2/4705202-shopping-cart-icon-design-vector-symbol-trolley-cart-basket-commerce-for-ecommerce-gratis-vetor.jpg" width="50px" height="50px"></a>
+                        <li>Carrinho</li>
+                        <br>
+                        <img src="https://as1.ftcdn.net/jpg/02/01/33/54/1000_F_201335438_CNpY0iWaXXAV95Gj8BPB0tEJlMcxWeaZ.jpg" width="50px" height="50px"></a>
+                        <li>Login</li>
+                    </ul>
+                    <br>
+                </div>    
+            </div>
+            <!-- <div id="container1">
+                <div id="menu">
+                    <ul>
+                        <li>Carrinho</li>
+                        <li>Login</li>
+                    </ul>
+                </div> -->
+
+                <div id="container1">
+                    <div id="menu">
+                            <br>
+                        <h2 class="h3 mb-3 fw-normal">Please sign in</h2>
+
+
+                        <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                        </div>
+
+
+                        <div class="form-check text-start my-3">
+                        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Remember me
+                        </label>
+                        </div>
+                        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                        <!-- <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p> -->
+
+                        </div>
+                        <br>
+                </div>
+
+                <div id="container3">
+                    <ul class="example">
+                        <li class="container3-item container3-item_first">Primeiro</li>
+                        <li class="container3-item container3-item_second">Segundo</li>
+                        <li class="container3-item container3-item_third">Terceiro</li>
+                    </ul>
+                </div>
+        </main>
+    </body>
+</html>
