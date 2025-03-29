@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -146,6 +146,53 @@
             showSlide();
         }
         setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic's Place</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .carousel {
+            width: 80%; max-width: 600px; margin: 20px auto; overflow: hidden;
+            position: relative; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-images {
+            display: flex; transition: transform 0.5s ease-in-out;
+        }
+        .carousel img { width: 100%; border-radius: 10px; }
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5); color: white; border: none;
+            cursor: pointer; padding: 10px; border-radius: 50%;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-images" id="carousel">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+        <button class="carousel-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+    <script>
+        let index = 0;
+        function mudarSlide(direcao) {
+            const carousel = document.getElementById("carousel");
+            const imagens = document.querySelectorAll(".carousel img");
+            index = (index + direcao + imagens.length) % imagens.length;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
     </script>
 </body>
 </html>
